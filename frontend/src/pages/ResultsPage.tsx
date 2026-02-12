@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { evaluationApi, adminApi } from '../api/client';
-import type { Evaluation, FiscalYear, EvaluationPeriod } from '../types';
+import type { Evaluation, FiscalYear } from '../types';
 import { PERIOD_LABELS } from '../types';
 import {
   PageHeader, Card, Select, GradeBadge, StatusBadge, EmptyState,

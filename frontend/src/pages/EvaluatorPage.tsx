@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { evaluationApi } from '../api/client';
 import type { Evaluation } from '../types';
 import { PERIOD_LABELS } from '../types';
-import { PageHeader, Card, Button, Textarea, GradeSelector, GradeBadge, EmptyState, Alert } from '../components/ui';
+import { PageHeader, Card, Button, Textarea, GradeSelector, EmptyState, Alert } from '../components/ui';
 import { ArrowLeft } from 'lucide-react';
 
 export default function EvaluatorPage() {

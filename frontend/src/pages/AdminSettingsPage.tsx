@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { adminApi } from '../api/client';
 import type { FiscalYear } from '../types';
-import { PageHeader, Card, Button, Alert, Badge } from '../components/ui';
+import { PageHeader, Card, Alert, Badge } from '../components/ui';
 
 export default function AdminSettingsPage() {
   const [fiscalYears, setFiscalYears] = useState<FiscalYear[]>([]);
