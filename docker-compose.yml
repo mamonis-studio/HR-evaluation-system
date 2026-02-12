@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # PostgreSQL
+  db:
+    image: postgres:16-alpine
+    container_name: hr-system-db
+    environment:
+      POSTGRES_DB: hr_system
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot API
+  api:
+    build: ./backend
+    container_name: hr-system-api
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: hr_system
+      DB_USER: postgres
+      DB_PASS: postgres
+      JWT_SECRET: change-this-to-a-secure-256-bit-secret-in-production
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # React Frontend
+  frontend:
+    build: ./frontend
+    container_name: hr-system-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
