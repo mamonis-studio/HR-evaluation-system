@@ -22,13 +22,13 @@ INSERT INTO departments (tenant_id, name) VALUES
 -- Users (password: demo1234 = BCrypt hash)
 INSERT INTO users (tenant_id, department_id, position_id, name, name_kana, email, password, can_evaluate) VALUES
 (1, 1, 1, 'デモ管理者', 'デモカンリシャ', 'admin@demo.example.com',
- '$2a$10$cSY3ZdTtmQzLnCmavSSGdulP4rizYJ86QsnXx7Xyb4d4ilyy5xTLO', TRUE),
+ '$2a$10$rVdApyag/heHAPFWFs.uMeLjjuL21yGehOB4pWePLSwdUdcVOFCCu', TRUE),
 (1, 2, 3, '山田 太郎', 'ヤマダ タロウ', 'manager@demo.example.com',
- '$2a$10$cSY3ZdTtmQzLnCmavSSGdulP4rizYJ86QsnXx7Xyb4d4ilyy5xTLO', TRUE),
+ '$2a$10$rVdApyag/heHAPFWFs.uMeLjjuL21yGehOB4pWePLSwdUdcVOFCCu', TRUE),
 (1, 2, 4, '佐藤 花子', 'サトウ ハナコ', 'evaluator@demo.example.com',
- '$2a$10$cSY3ZdTtmQzLnCmavSSGdulP4rizYJ86QsnXx7Xyb4d4ilyy5xTLO', TRUE),
+ '$2a$10$rVdApyag/heHAPFWFs.uMeLjjuL21yGehOB4pWePLSwdUdcVOFCCu', TRUE),
 (1, 2, 6, '鈴木 一郎', 'スズキ イチロウ', 'staff@demo.example.com',
- '$2a$10$cSY3ZdTtmQzLnCmavSSGdulP4rizYJ86QsnXx7Xyb4d4ilyy5xTLO', FALSE);
+ '$2a$10$rVdApyag/heHAPFWFs.uMeLjjuL21yGehOB4pWePLSwdUdcVOFCCu', FALSE);
 
 -- Fiscal Years
 INSERT INTO fiscal_years (tenant_id, year, is_current, goal_setting_open, summer_self_open, summer_eval_open, winter_self_open, winter_eval_open) VALUES
