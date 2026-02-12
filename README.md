@@ -10,6 +10,18 @@
 
 ---
 
+## 画面イメージ
+
+### ログイン画面
+![ログイン画面](docs/screenshots/login.png)
+
+### ダッシュボード（管理者）
+![ダッシュボード](docs/screenshots/dashboard.png)
+
+### 評価入力画面
+![評価入力](docs/screenshots/evaluator.png)
+---
+
 ## 技術スタック
 
 | レイヤー | 技術 |

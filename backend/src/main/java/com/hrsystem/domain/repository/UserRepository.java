@@ -11,7 +11,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByTenantIdAndEmail(Long tenantId, String email);
 
-    @Query("SELECT u FROM User u WHERE u.email = :email AND u.isActive = true")
+    @Query("SELECT u FROM User u LEFT JOIN FETCH u.position LEFT JOIN FETCH u.department LEFT JOIN FETCH u.tenant WHERE u.email = :email AND u.isActive = true")
     Optional<User> findActiveByEmail(@Param("email") String email);
 
     List<User> findByTenantIdAndIsActiveTrue(Long tenantId);
