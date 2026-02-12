@@ -4,7 +4,7 @@ import type { Evaluation } from '../types';
 import { PERIOD_LABELS } from '../types';
 import {
   PageHeader, Card, Button, Textarea, GradeSelector, GradeBadge,
-  EmptyState, Alert, StatusBadge,
+  EmptyState, Alert,
 } from '../components/ui';
 import { ArrowLeft } from 'lucide-react';
 
