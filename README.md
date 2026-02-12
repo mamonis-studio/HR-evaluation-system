@@ -251,7 +251,7 @@ hr-evaluation-system/
 ### Docker で起動
 
 ```bash
-git clone https://github.com/your-name/hr-evaluation-system.git
+git clone https://github.com/mamonis-studio/hr-evaluation-system.git
 cd hr-evaluation-system
 docker-compose up -d
 ```
